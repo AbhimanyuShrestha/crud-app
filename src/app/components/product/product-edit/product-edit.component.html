@@ -1,0 +1,63 @@
+
+<div class="content w-100">
+    <div class="pdt-50">
+        <h2 class="mx-5 header" *ngIf="isUpdate ">Edit Product</h2>
+        <h2 class="mx-5 header" *ngIf="isCreate">Create Product</h2>
+    </div>
+
+    <div class="mx-5 my-5 back" (click)="goToProductPage()">
+        <img src="../../../../assets/back.png" class="custom-image">
+        <span>back to list</span>
+    </div>
+    <div class="br-16 mx-5 my-5 mt-4 white ">
+        <div class="mx-5 my-5">
+            <form [formGroup]="productForm">
+        
+                <div class="row">
+                    <div class="col-md-6 mt-3">
+                        <div class="form-group">
+                            <label for="id">ID</label>
+                            <input class="form-control form-control-lg" id="id" formControlName="id" placeholder="Id">
+                            <app-error-message [control]="productForm.controls.id" *ngIf="productFormSubmitted && productForm.controls.id.errors" ></app-error-message>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control form-control-lg" id="name" formControlName="name" placeholder="Name">
+                            <app-error-message [control]="productForm.controls.name" *ngIf="productFormSubmitted && productForm.controls.name.errors" ></app-error-message>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input  class="form-control form-control-lg" id="description" formControlName="description"
+                                placeholder="Description">
+                                <app-error-message [control]="productForm.controls.description" *ngIf="productFormSubmitted && productForm.controls.description.errors" ></app-error-message>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input  class="form-control form-control-lg" id="price" formControlName="price" placeholder="Price">
+                            <app-error-message [control]="productForm.controls.price" *ngIf="productFormSubmitted && productForm.controls.price.errors" ></app-error-message>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-12 mt-4 mb-5 float-right" *ngIf="isUpdate">
+                        <button class="btn btn-secondary" (click)="updateProduct()">Update</button>
+                    </div>
+                    <div class="col-md-12 mt-4 mb-5 float-right" *ngIf="isCreate">
+                        <button class="btn btn-success" (click)="createProduct()">Save</button>
+                    </div>
+                </div>
+        
+        
+        
+        
+        
+            </form>
+        </div>
+    </div>
+
+</div>

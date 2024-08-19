@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    font-family: sans-serif !important;
+}
+.container{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.content{
+    background-color: #cccc;
+    border-radius: 24px;
+    height: 100vh !important;
+}
+.header{
+    color: #000000;
+}
+
+.white{
+    background-color: white;
+}
+
+.grey{
+    background-color: #cccc;
+}
+
+.mint{
+    background-color: #7bdcb5;
+}
+
+.back{
+    color: #ff6f61;
+}
+
+
+.form-group label{
+    color:#333333
+}
+
+.btn-secondary{
+    background-color: #4a90e2 !important ;
+}
+
+.btn-success{
+    background-color: #ff6f61 !important ;
+}
+
+.btn-primary{
+    background-color: #7bdcb5 !important ;
+}
+
+.btn-info{
+    background-color: #ffc107  !important;
+}
+
+.input {
+    width: 100%;
+    max-width: 220px;
+    height: 45px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px -18px;
+  }
+  
+  .input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+  }
+  
+  .input:active {
+    transform: scale(0.95);
+  }
+  
+  .input:focus {
+    border: 2px solid grey;
+  }
+
+.pdt-50{
+    padding-top:50px;
+}
+.br-4{
+    border-radius: 4px;
+}
+.br-8{
+    border-radius: 8px;
+}
+.br-12{
+    border-radius: 12px;
+}
+.br-16{
+    border-radius: 16px;
+}
+.br-20{
+    border-radius: 20px;
+}
+
+.table-responsive{
+    overflow: hidden;
+    overflow-y: auto; 
+    max-height: 65vh !important;
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px; 
+    min-height: 65vh !important
+}
+
+.custom-image {
+    background: none; 
+    width: 20px;     
+    height: 20px;    
+}

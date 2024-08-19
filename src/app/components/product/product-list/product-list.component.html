@@ -1,0 +1,53 @@
+<div class="content w-100">
+    <div class="pdt-50">
+       
+        <h2 class="mx-5 header">Product List</h2>
+      
+        <div class="br-16 mint mx-5  mt-4">
+            <button class="btn large btn-info my-4 mx-4"
+                routerLink="/products/0/edit">Add Prodcut</button>
+        </div>
+
+        <div class="br-16 mx-5 mt-4 " >
+            <div class="white d-flex justify-content-end"
+                style="border-top-left-radius: 16px; border-top-right-radius: 20px;">
+                <app-product-search class="mx-4 my-4" (search)="onSearch($event)"></app-product-search>
+            </div>
+
+            <div class="table-responsive mb-5">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Product Description</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr appHighlight *ngFor="let product of filteredProducts$ | async; trackBy: trackById">
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.description }}</td>
+                            <td>{{ product.price | currencyFormat: 'Rs' }}</td>
+                            <td>
+                                <button class="btn small btn-success mx-2 my-2"
+                                    (click)="getProductsDetails(product.id)">Details</button>
+                                <button class="btn small btn-secondary mx-2 my-2" (click)="editProduct(product)">Edit</button>
+                                <button class="btn small btn-danger mx-2 my-2" (click)="deleteProductById(product.id)">Delete</button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div *ngIf="productNotFound">
+                    <div class="text-danger text-center mt-5 pdt-5 fs-5" style="min-height: 65vh !important; background-color: white;">
+                        Sorry! There aren't any products in existence.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+
+.sidebar { 
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.main-header{
+  font-size: 2.5rem  !important;
+  
+}
+
+.menu-divider{
+  border-top: 1px solid black;
+  width: 100% !important;
+}
+
+.nav-link{
+  color: #001f3f  !important;
+  font-size: 1.5rem  !important;
+}
+  
+  

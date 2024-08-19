@@ -1,0 +1,48 @@
+<div class="content w-100">
+    <div class="pdt-50">
+        <h2 class="mx-5 header">Product Details</h2>
+    </div>
+
+
+    <div class="mx-5 my-5 back" (click)="goBackToPrevPage()">
+        <img src="../../../../assets/back.png" class="custom-image">
+        <span>back to list</span>
+    </div>
+    <div class="br-16 mx-5 my-5 mt-4 white ">
+        
+        <div class="mx-5 my-5 ">
+            <div *ngIf="product" >
+                <div class="row ">
+                    <div class="col-md-6 mt-3">
+                        <div class="form-group">
+                            <label for="id">ID</label>
+                            <input class="form-control" id="id" disabled [value]="product.id" placeholder="Id" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control" id="name" disabled [value]="product.name" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input class="form-control" id="description" placeholder="Description" disabled
+                                [value]="product.description" />
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3 mb-5">
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input class="form-control" id="price" placeholder="Price" disabled
+                                [value]="product.price" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-danger mb-5 mt-5 fs-5" *ngIf="!product">Product Details Not Found</div>
+        </div>
+    </div>
+</div>

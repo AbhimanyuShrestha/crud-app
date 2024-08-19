@@ -1,0 +1,27 @@
+
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 mint"
+         style="border-top-right-radius: 24px; border-bottom-right-radius: 24px;">
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span class="d-none d-sm-inline main-header" style="color: #2c3e50;">PROSHORE Product-crud</span>
+        </a>
+        <div class="menu-divider"></div>
+        <ul class="nav nav-pills menu-divider flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li class="nav-item">
+            <a routerLink="/products" class="nav-link align-middle px-0">
+             Product
+            </a>
+          </li>         
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <app-loader></app-loader>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
