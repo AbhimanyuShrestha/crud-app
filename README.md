@@ -49,30 +49,32 @@ The application interacts with a https://mockapi.io/ RESTful API to perform CRUD
 
 ### Example API Endpoints
 
-- `GET /api/items`: Retrieve all items.
-- `GET /api/items/:id`: Retrieve details of an item by its ID.
-- `POST /api/items`: Create a new item.
-- `PUT /api/items/:id`: Update an existing item.
-- `DELETE /api/items/:id`: Delete an item.
+- `GET /api/v1/product`: Retrieve all items.
+- `GET /api/v1/product:id`: Retrieve details of an item by its ID.
+- `POST /api/v1/product`: Create a new item.
+- `PUT /api/v1/product:id`: Update an existing item.
+- `DELETE /api/v1/product:id`: Delete an item.
 
 
 ## Components Overview
 
-### `ItemListComponent`
-- Displays a list of items.
-- Integrates search and filtering functionality.
+### `ProductListComponent`
+- Displays a list of products.
+- Integrates search functionality.
 
-### `ItemDetailComponent`
-- Displays detailed information about a selected item.
-- Allows editing and deleting of the item.
+### `ProductDetailsComponent`
+- Displays detailed information about a selected product.
 
-### `ItemFormComponent`
-- Used for creating and editing items.
+### `ProductEditCompoent`
+- Used for creating and editing product.
 - Handles form validation and submission.
 
-### `SearchComponent`
-- Provides a search interface to filter the list of items.
-- Integrates with the item list to display filtered results based on the search query.
+### `ErrorMessageComponent`
+- Handle the form validtion error message
+
+### `LoaderComponent`
+- Handle the global loader
+
 
 
 
